@@ -1,0 +1,24 @@
+lists of random food needed:
+- animal meat
+- vegetables
+- fruits
+- grains
+- seasoning
+
+items needed
+- oven / pan / air-fryer / microwave
+
+list of amounts
+- randomly generated numbers (in a range)
+- grams / kilograms / prefixes and suffixes
+- oven temperature
+- time to cook (minutes / hours)
+
+modes (which would opt for different ingredients and cooking methods)
+- dessert -> fruits / grains / seasoning / items
+- savory dish -> animal meat / vegetables / grains / seasoning / items
+- light dish -> animal meat / vegetables / grains / MICROWAVE
+
+with all of this...the possibilities should hopefully be endless...
+
+in the end, generate a beautiful looking recipe web look for the generator, if possible.
