@@ -22,3 +22,48 @@ modes (which would opt for different ingredients and cooking methods)
 with all of this...the possibilities should hopefully be endless...
 
 in the end, generate a beautiful looking recipe web look for the generator, if possible.
+
+=============
+
+recipe samples:
+
+Dessert - {fruits2} CAKE (adapted from Carrot Cake: https://www.bbcgoodfood.com/recipes/carrot-cake)
+
+230ml {vegetables1} oil
+100g natural yogurt
+4 large eggs
+1½ tsp vanilla extract
+½ {fruits1}, zested
+265g {grains1} flour
+335g {seasoning1}
+2½ tsp {seasoning2}
+¼ fresh {nuts1}, finely grated
+265g {fruits2}, grated
+100g {fruits3}
+100g {nuts2}, roughly chopped
+
+100g slightly salted butter, softened
+300g {seasoning3}
+100g {seasoning4}
+
+STEP 1
+Heat the oven to 180C/160C fan/gas 4. 
+Oil and line the base and sides of two 20cm cake tins with baking parchment. 
+Whisk the {vegetables1} oil, yogurt, eggs, vanilla and zest in a jug. Mix the flour, {seasoning1}, {seasoning2} and {nuts1} with a good pinch of salt in a bowl. 
+Squeeze any lumps of {seasoning1} through your fingers, shaking the bowl a few times to bring the lumps to the surface.
+
+STEP 2
+Add the wet ingredients to the dry, along with the {fruits2}, {fruits3} and half the {nuts2}. 
+Mix well to combine, then divide between the tins.
+
+STEP 3
+Bake for 25-30 mins or until a skewer inserted into the centre of the cake comes out clean. 
+If any wet mixture clings to the skewer, return to the oven for 5 mins, then check again. 
+Leave to cool in the tins.
+
+STEP 4
+To make the icing, beat the butter and {seasoning3} together until smooth. 
+Add half the {seasoning4} and beat again, then add the rest (adding it bit by bit prevents the icing from splitting). 
+Remove the cakes from the tins and sandwich together with half the icing. 
+Top with the remaining icing and scatter with the remaining {nuts2}. 
+Will keep in the fridge for up to five days. Best eaten at room temperature.

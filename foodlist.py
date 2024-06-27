@@ -376,7 +376,9 @@ fruits = [
     "White sapote",
     "Ximenia",
     "Yumberry",
-    "Yuzu"
+    "Yuzu",
+    "Carrot",
+    "Potato"
 ]
 
 # this one I came up with myself - the reason why it is significantly shorter
@@ -399,4 +401,41 @@ seasoning = [
     "stevia",
     "sesame oil",
     "wasabi",
+    "cinnamon",
+    "marmite",
+    "vegemite"
+]
+
+nuts = [
+    "Acorn",
+    "Almond",
+    "Beech",
+    "Brazil nut",
+    "Candlenut",
+    "Cashew",
+    "Chestnut",
+    "Chinquapin",
+    "Coconut",
+    "Coquito",
+    "Dika",
+    "Ginkgo",
+    "Hazelnut",
+    "Hickory",
+    "Kola nut",
+    "Macadamia",
+    "Malabar chestnut",
+    "Mongongo",
+    "Ogbono",
+    "Pachira",
+    "Paradise nut",
+    "Peanut",
+    "Pequi",
+    "Pili nut",
+    "Pine nut",
+    "Pistachio",
+    "Sapucaia",
+    "Soybean",
+    "Sunflower seed",
+    "Tiger nut",
+    "Walnut"
 ]
