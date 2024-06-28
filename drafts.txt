@@ -131,3 +131,36 @@ Arrange the {vegetables2} mixture on plates and top with the {vegetables1} and {
 ######
 
 Future: steamed, fried, baked, sandwich, burger?
+
+sandwich - roast {meat1} sandwich
+
+1 tbsp {nuts1} oil\n
+1 {fruits1}, finely chopped\n
+150ml {fruits2} wine\n
+300g {meat2} stock\n
+1 large baguette\n
+½-1 tbsp {seasoning1}\n
+100g cold roast {meat1}\n
+½ small pack {vegetables1}, finely chopped\n
+1 tbsp {nuts2}, finely chopped\n
+1 tbsp {seasoning2}\n
+handful {vegetables2}, to serve\n
+
+STEP 1\n
+Heat oven to 180C.\n
+Pour the oil into a small saucepan over a medium heat,\n 
+add the {fruits1} with a pinch of salt and cook, stirring frequently,\n 
+for 5 mins until softened and beginning to caramelise.\n
+STEP 2\n
+Tip in the wine, cook for a couple of mins until reduced by half,\n 
+then pour in the stock. Leave to bubble for 15-20 mins\n 
+until you have a thick gravy.\n
+STEP 3\n
+Put the baguette in the oven for 5 mins to warm up and crisp, then\n 
+cut in half lengthways. Spread one half with {seasoning1} and top with\n 
+the roast {meat1}.\n
+STEP 4\n
+Add the {vegetables1}, {nuts2} and {seasoning2} to the gravy.\n 
+Season to taste, then spoon the gravy over the other half of the baguette,\n 
+scattering over some {vegetables2}. Halve, divide between two plates,\n 
+then eat straight away, with more gravy on the side.\n

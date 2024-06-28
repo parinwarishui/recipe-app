@@ -105,21 +105,21 @@ def show_recipe(selected):
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
 
-        ingredients_name = tk.Label(scrollable_frame, text=string_cake_name, font=('Comic Sans MS', 35, 'bold'), background=background_color, fg='black')
+        ingredients_name = tk.Label(scrollable_frame, text=string_cake_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
         ingredients_name.pack(pady=10)
-
-        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_header_label.pack(pady=10)
 
         recipe_image = tk.PhotoImage(file="cake.png")
         image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
         image_label.pack(pady=10)
         image_label.image = recipe_image
 
+        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+        ingredients_header_label.pack(pady=10)
+
         ingredients_label = tk.Label(scrollable_frame, text=string_cake_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
         ingredients_label.pack(pady=10)
 
-        recipe_label = tk.Label(scrollable_frame, text=string_cake, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+        recipe_label = tk.Label(scrollable_frame, text=string_cake, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
         recipe_label.pack(pady=10)
 
     elif selected == "stir-fry":
@@ -164,7 +164,7 @@ def show_recipe(selected):
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
 
-        ingredients_name = tk.Label(scrollable_frame, text=string_stirfry_name, font=('Comic Sans MS', 35, 'bold'), background=background_color, fg='black')
+        ingredients_name = tk.Label(scrollable_frame, text=string_stirfry_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
         ingredients_name.pack(pady=10)
 
         recipe_image = tk.PhotoImage(file="stirfry.png")
@@ -178,7 +178,7 @@ def show_recipe(selected):
         ingredients_label = tk.Label(scrollable_frame, text=string_stirfry_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
         ingredients_label.pack(pady=10)
 
-        recipe_label = tk.Label(scrollable_frame, text=string_stirfry, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+        recipe_label = tk.Label(scrollable_frame, text=string_stirfry, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
         recipe_label.pack(pady=10)
 
     elif selected == "salad":
@@ -221,7 +221,7 @@ def show_recipe(selected):
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
 
-        ingredients_name = tk.Label(scrollable_frame, text=string_salad_name, font=('Comic Sans MS', 35, 'bold'), background=background_color, fg='black')
+        ingredients_name = tk.Label(scrollable_frame, text=string_salad_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
         ingredients_name.pack(pady=10)
 
         recipe_image = tk.PhotoImage(file="salad.png")
@@ -235,7 +235,76 @@ def show_recipe(selected):
         ingredients_label = tk.Label(scrollable_frame, text=string_salad_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
         ingredients_label.pack(pady=10)
 
-        recipe_label = tk.Label(scrollable_frame, text=string_salad, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+        recipe_label = tk.Label(scrollable_frame, text=string_salad, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+        recipe_label.pack(pady=10)
+
+    elif selected == "sandwich":
+        vegetables1 = random_norepeat(leaf_veggies)
+        vegetables2 = random_norepeat(leaf_veggies)
+        fruits1 = random_norepeat(fruits)
+        fruits2 = random_norepeat(fruits)
+        seasoning1 = random_norepeat(seasoning)
+        seasoning2 = random_norepeat(seasoning)
+        meat1 = random_norepeat(animal_meats)
+        meat2 = random_norepeat(animal_meats)
+        nuts1 = random_norepeat(nuts)
+        nuts2 = random_norepeat(nuts)
+
+        string_sandwich_ingredients = (
+            f"1 tbsp {nuts1} oil\n"
+            f"1 {fruits1}, finely chopped\n"
+            f"150ml {fruits2} wine\n"
+            f"300g {meat2} stock\n"
+            f"1 large baguette\n"
+            f"½-1 tbsp {seasoning1}\n"
+            f"100g cold roast {meat1}\n"
+            f"½ small pack {vegetables1}, finely chopped\n"
+            f"1 tbsp {nuts2}, finely chopped\n"
+            f"1 tbsp {seasoning2}\n"
+            f"handful {vegetables2}, to serve\n"
+        )
+
+        string_sandwich_name = (f"{meat1} sandwich(?)")
+
+        string_sandwich = f"""
+            STEP 1
+            Heat oven to 180C.
+            Pour the oil into a small saucepan over a medium heat,
+            add the {fruits1} with a pinch of salt and cook, stirring frequently,
+            for 5 mins until softened and beginning to caramelise.
+            STEP 2
+            Tip in the wine, cook for a couple of mins until reduced by half,
+            then pour in the stock. Leave to bubble for 15-20 mins
+            until you have a thick gravy.
+            STEP 3
+            Put the baguette in the oven for 5 mins to warm up and crisp, then
+            cut in half lengthways. Spread one half with {seasoning1} and top with
+            the roast {meat1}.
+            STEP 4
+            Add the {vegetables1}, {nuts2} and {seasoning2} to the gravy.
+            Season to taste, then spoon the gravy over the other half of the baguette,
+            scattering over some {vegetables2}. Halve, divide between two plates,
+            then eat straight away, with more gravy on the side.
+            """
+
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+
+        ingredients_name = tk.Label(scrollable_frame, text=string_sandwich_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+        ingredients_name.pack(pady=10)
+
+        recipe_image = tk.PhotoImage(file="sandwich.png")
+        image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
+        image_label.pack(pady=10)
+        image_label.image = recipe_image
+
+        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+        ingredients_header_label.pack(pady=10)
+
+        ingredients_label = tk.Label(scrollable_frame, text=string_sandwich_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
+        ingredients_label.pack(pady=10)
+
+        recipe_label = tk.Label(scrollable_frame, text=string_sandwich, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
         recipe_label.pack(pady=10)
 
     reset_all_lists() #reset all ingredients lists
@@ -266,20 +335,22 @@ submit_button.pack()
 
 # scrollable frame that shows recipe
 recipe_frame = tk.Frame(root, background=background_color)
-recipe_frame.pack(fill=tk.BOTH, expand=True, pady=10, padx=10)
+recipe_frame.place(relx=0.5, rely=0.55, anchor='center', width=850, height=600)
 
-canvas = tk.Canvas(recipe_frame, background=background_color, borderwidth=0, highlightthickness=0)
-scrollbar = ttk.Scrollbar(recipe_frame, orient='vertical', command=canvas.yview)
+border_frame = tk.Frame(recipe_frame, background="black", bd=5)
+border_frame.pack(expand=True, fill="both", padx=5, pady=5)
+
+canvas = tk.Canvas(border_frame, background=background_color, borderwidth=0, highlightthickness=0)
+canvas.pack(side="left", fill="both", expand=True)
+
 scrollable_frame = tk.Frame(canvas, background=background_color)
-
 scrollable_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
 
-canvas.create_window((0, 0), window=scrollable_frame, anchor="n")
-canvas.configure(yscrollcommand=scrollbar.set)
+canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
 
-canvas.pack(side="left", fill="both", expand=True)
+scrollbar = ttk.Scrollbar(border_frame, orient='vertical', command=canvas.yview)
 scrollbar.pack(side="right", fill="y")
-
+canvas.configure(yscrollcommand=scrollbar.set)
 
 ############
 
