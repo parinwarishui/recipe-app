@@ -50,6 +50,7 @@ def on_click():
 def show_recipe(selected):
     # declare general variables
     global string_name, string_ingredients, string_steps, recipe_image
+    adjective1 = random.choice(foodlist.adjectives)
 
     if selected == "cake":
         vegetables1 = random_norepeat(leaf_veggies)
@@ -83,7 +84,7 @@ def show_recipe(selected):
             f"100g {seasoning4}"
         )
 
-        string_name = (f"{fruits2} cake(?)")
+        string_name = (f"{adjective1} {fruits2} cake(?)")
 
         string_steps = (f"STEP 1\n"
         f"Heat the oven to 180C.\n" 
@@ -105,8 +106,6 @@ def show_recipe(selected):
         f"Top with the remaining icing and scatter with the remaining {nuts2}.\n"
         f"Will keep in the fridge for up to five days. Best eaten at room temperature.\n")
 
-        for widget in scrollable_frame.winfo_children():
-            widget.destroy()
         recipe_image = tk.PhotoImage(file="cake.png")
 
     elif selected == "stir-fry":
@@ -135,7 +134,7 @@ def show_recipe(selected):
             f"1 tsp {grains2}"
         )
 
-        string_name = f"stir-fried {meat1}(?)"
+        string_name = f"{adjective1} stir-fried {meat1}(?)"
 
         string_steps = (
             f"STEP 1\n"
@@ -148,8 +147,6 @@ def show_recipe(selected):
             f"Divide the drained noodles between 2 bowls. Top with the {meat1} and {vegetables1}, and finish with a sprinkling of {grains2}.\n"
         )
 
-        for widget in scrollable_frame.winfo_children():
-            widget.destroy()
         recipe_image = tk.PhotoImage(file="stirfry.png")
 
     elif selected == "salad":
@@ -161,6 +158,7 @@ def show_recipe(selected):
         seasoning2 = random_norepeat(seasoning)
         grains1 = random_norepeat(grains)
         grains2 = random_norepeat(grains)
+        adjective1 = random.choice(foodlist.adjectives)
 
         string_ingredients = (
             f"2 large {fruits2}\n"
@@ -173,7 +171,7 @@ def show_recipe(selected):
             f"100g bag {vegetables2}\n"
         )
 
-        string_name = (f"{vegetables1}, {fruits1} & {fruits2} salad(?)")
+        string_name = (f"{adjective1} {vegetables1}, {fruits1} & {fruits2} salad(?)")
 
         string_steps = (
             f"STEP 1\n"
@@ -188,8 +186,6 @@ def show_recipe(selected):
             f"Arrange the {vegetables2} mixture on plates and top with the {vegetables1} and {fruits2}.\n"
         )
 
-        for widget in scrollable_frame.winfo_children():
-            widget.destroy()
         recipe_image = tk.PhotoImage(file="salad.png")
 
     elif selected == "sandwich":
@@ -218,7 +214,7 @@ def show_recipe(selected):
             f"handful {vegetables2}, to serve\n"
         )
 
-        string_name = (f"{meat1} sandwich(?)")
+        string_name = (f"{adjective1} {meat1} sandwich(?)")
 
         string_steps = f"""
             STEP 1
@@ -240,9 +236,7 @@ def show_recipe(selected):
             scattering over some {vegetables2}. Halve, divide between two plates,
             then eat straight away, with more gravy on the side.
             """
-        
-        for widget in scrollable_frame.winfo_children():
-            widget.destroy()
+
         recipe_image = tk.PhotoImage(file="sandwich.png")
         
     elif selected == "soup":
@@ -266,7 +260,7 @@ def show_recipe(selected):
             small handful flat-leaf {vegetables4}
         """)
 
-        string_name = (f"{vegetables1} soup(?)")
+        string_name = (f"{adjective1} {vegetables1} soup(?)")
 
         string_steps = f"""
             STEP 1
@@ -283,8 +277,6 @@ def show_recipe(selected):
             Scatter over the {vegetables4}, if you like, and serve.
             """
 
-        for widget in scrollable_frame.winfo_children():
-            widget.destroy()
         recipe_image = tk.PhotoImage(file="soup.png")
     
     elif selected == "noodles":
@@ -307,7 +299,7 @@ def show_recipe(selected):
             2 {vegetables1}, chopped
         """)
 
-        string_name = (f"{meat1} noodles(?)")
+        string_name = (f"{adjective1} {meat1} noodles(?)")
 
         string_steps = f"""
             STEP 1
@@ -324,13 +316,197 @@ def show_recipe(selected):
             the noodles, plus any from the roasting tin, and toss together. Serve with the 
             {meat1}, scattered with the chopped {vegetables1} and remaining {grains1}.
             """
-
-        for widget in scrollable_frame.winfo_children():
-            widget.destroy()
+        
         recipe_image = tk.PhotoImage(file="noodles.png")
+    
+    elif selected == "pie":
+        fruits1 = random_norepeat(fruits)
+        fruits2 = random_norepeat(fruits)
+        fruits3 = random_norepeat(fruits)
+        seasoning1 = random_norepeat(seasoning)
+        seasoning2 = random_norepeat(seasoning)
+        grains1 = random_norepeat(grains)
+        grains2 = random_norepeat(grains)
+        nuts1 = random_norepeat(nuts)
+
+        string_ingredients = (f"""
+            300g {grains1} flour
+            200g cold salted butter, cut into cubes
+            1 tsp {fruits2} vinegar
+            1 egg, beaten
+            {seasoning1}
+            1.2kg {fruits1} peeled, stoned and cut into chunks
+            150g {seasoning2}
+            60g {grains2} flour, plus extra for dusting
+            1 {fruits3}, juiced
+            20g {nuts1}, peeled and sliced
+        """)
+
+        string_name = (f"{adjective1} {fruits1} pie(?)")
+
+        string_steps = f"""
+            STEP 1
+            Tip the flour into a large bowl and toss with the butter. 
+            Mix the butter into the flour using two forks until you have medium lumps of butter 
+            coated in flour. Add the vinegar, then slowly add 120ml ice-cold water, 1 tbsp at a time, 
+            mixing well until you have a shaggy dough.
+
+            STEP 2
+            Turn the dough out onto a surface and fold it onto itself a few times until you have a 
+            pliable dough with streaks of butter throughout. If it feels dry, dampen your hands lightly 
+            and continue to fold. If it’s sticky, sprinkle over a little more flour. When it’s cohesive, 
+            divide it in two and flatten into discs. Wrap and chill for 2 hrs, or overnight.
+
+            STEP 3
+            For the filling, combine the {fruits1}, {seasoning2}, {grains2} flour, {fruits3} juice and {nuts1} in a large bowl.
+
+            STEP 4
+            Roll out each pastry disc into a 30cm circle on a lightly floured surface. 
+            Use one to line a 23cm pie dish, smoothing it to the edges. Heat the oven to 220C/200C fan/gas 7.
+
+            STEP 5
+            Cut the second pastry circle into 12 x 2.5cm-wide strips using a pizza cutter.
+            Weave the strips into a lattice by arranging six vertically parallel to each other on a board 
+            or sheet of baking parchment with a space between each. Partially fold back alternate strips, 
+            then lay another horizontally across the top, near the folds. Flip the folded strips back over 
+            to cover the horizontal ones. Repeat with the process, alternating which vertical strips are 
+            folded down each time.
+
+            STEP 6
+            Pour the filling into the pastry case. Brush some beaten egg over the edge of the pie crust, 
+            then top with the lattice, press around the edge to seal, then crimp using a fork. 
+            Brush over the rest of the egg, then cover it with {seasoning1}.
+
+            STEP 7
+            Bake at 220C/200C fan/gas 7 for 30 mins, then turn the oven down to 200C/180C fan/gas 6 for 45 mins more, 
+            loosely covering with foil if it gets too dark. Leave to cool for 1 hr so the juices can set before slicing.
+            """
+        
+        recipe_image = tk.PhotoImage(file="pie.png")
+
+    elif selected == "pizza":
+        fruits1 = random_norepeat(fruits)
+        fruits2 = random_norepeat(fruits)
+        fruits3 = random_norepeat(fruits)
+        grains1 = random_norepeat(grains)
+        meat1 = random_norepeat(animal_meats)
+        vegetables1 = random_norepeat(leaf_veggies)
+        vegetables2 = random_norepeat(leaf_veggies)
+        vegetables3 = random_norepeat(leaf_veggies)
+
+        string_ingredients = (f"""
+            10g fresh yeast or 7g sachet dried
+            ½ tsp sugar
+            375g {grains1} flour, plus extra for dusting
+            1 tbsp {vegetables1} oil, plus extra for greasing
+            375g {meat1}
+            fresh {vegetables3}, to serve
+            3 tbsp {vegetables2} oil
+            1 {fruits1}, chopped
+            1 {fruits3}, crushed
+            2 x 400g cans good-quality Italian chopped {fruits2}
+        """)
+
+        string_name = (f"{adjective1} {meat1} pizza")
+
+        string_steps = f"""
+            STEP 1
+            Mix together the yeast and sugar with 250ml warm water and leave to sit for 10 mins. 
+            Place half the flour in a table-top mixer with a dough hook, pour in the yeast mixture 
+            and beat at medium speed for 10 mins (or mix in a bowl, then knead with oiled hands in 
+            the bowl for 5-10 mins).
+
+            STEP 2
+            Leave somewhere warm for 10 more mins, then add the remaining flour and oil. 
+            Beat or knead to a dough for a further 5 mins. Put in a well-oiled bowl, 
+            cover with a cloth and place somewhere warm to double in size – about 1½ hrs.
+
+            STEP 3
+            For the sauce, heat the {vegetables2} oil in a pan over a moderate heat. 
+            Add the {fruits1} and cook for 3 mins, stirring constantly. 
+            Add the {fruits3}, 1 tsp sea salt and 1 tsp ground black pepper and cook for 2 mins more. 
+            Add the {fruits2} and bring to the boil, then reduce the heat and simmer for a good 
+            20 mins, stirring occasionally.
+
+            STEP 4
+            Once your dough has doubled in size, slap it down on a lightly floured surface and knead 
+            for 4 mins until soft but not too elastic. Divide into 6 pieces, roll into balls and leave to rest for 10 mins. 
+            Heat oven to the highest temperature possible (270C fan in the Good Food test kitchen) 
+            and place a flat baking sheet in the oven.
+
+            STEP 5
+            With a well-floured rolling pin, roll out each ball of dough as thinly as possible. 
+            Remove the baking sheet from the oven, oil or dust with flour, then carefully transfer the dough base onto it. 
+            Spread over some of the {fruits2} sauce, then the {meat1} and any toppings you desire.
+
+            STEP 6
+            Cook for between 5-10 mins depending on your oven temp, 
+            until the base is crisp and the {meat1} cooked. Scatter with {vegetables3}.
+            """
+        
+        recipe_image = tk.PhotoImage(file="pizza.png")
+
+    elif selected == "curry":
+        fruits1 = random_norepeat(fruits)
+        fruits2 = random_norepeat(fruits)
+        meat1 = random_norepeat(animal_meats)
+        meat2 = random_norepeat(animal_meats)
+        vegetables1 = random_norepeat(leaf_veggies)
+        seasoning1 = random_norepeat(seasoning)
+        seasoning2 = random_norepeat(seasoning)
+        seasoning3 = random_norepeat(seasoning)
+        seasoning4 = random_norepeat(seasoning)
+
+        string_ingredients = (f"""
+            2 tbsp oil
+            500g diced braising {meat1}
+            1 tbsp butter
+            1 large onion, chopped
+            2 garlic cloves, crushed
+            1 thumb sized piece of {fruits2}, finely grated
+            ¼ tsp {seasoning1}
+            1 tsp {seasoning2}
+            2 tsp {seasoning3}
+            3 {seasoning4}, crushed
+            400g can chopped {fruits1}
+            300ml {meat2} stock
+            1 tsp sugar
+            2 tsp garam masala
+            2 tbsp double cream (optional)
+            ½ small bunch {vegetables1}, roughly chopped
+            naan bread or rice, to serve
+        """)
+
+        string_name = (f"{adjective1} {meat1} curry")
+
+        string_steps = f"""
+            STEP 1
+            Heat one tbsp of the oil in a casserole pot over a medium-high heat. 
+            Season the {meat1} and fry in the pot for 5-8 mins, turning with a pair 
+            of tongs half way until evenly browned. Set aside on a plate.
+
+            STEP 2
+            Heat the remaining oil and butter in the pan and add the onions. 
+            Fry gently for 15 mins or until golden brown and caramelised. 
+            Add the garlic, {fruits2}, {seasoning1}, {seasoning2}, {seasoning3} and {seasoning4}
+            and fry for two mins. Tip in the {fruits1}, stock and sugar and bring to the simmer.
+
+            STEP 3
+            Add the {meat1}, put a lid on top of the curry and cook over a low heat 
+            for 1 ½ – 2 hrs or until the meat is tender and falling apart. 
+            Remove the lid for the last 20 minutes of cooking.
+
+            STEP 4
+            Stir through the garam masala and cream (if using) and season to taste. 
+            Scatter over the {vegetables1} and serve with naan breads or rice.
+            """
+        
+        recipe_image = tk.PhotoImage(file="curry.png")
 
     # create the text labels and images
 
+    for widget in scrollable_frame.winfo_children():
+        widget.destroy()
     header_label = tk.Label(scrollable_frame, text=string_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
     header_label.pack(pady=10)
 
