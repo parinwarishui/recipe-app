@@ -1,6 +1,6 @@
 # this is a file to collect the data to be used
 
-dish_type = ["savory", "light", "dessert"]
+dish_type = ["stir-fry", "cake", "salad"]
 
 animal_meats = [
     "american bison",

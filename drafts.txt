@@ -27,7 +27,7 @@ in the end, generate a beautiful looking recipe web look for the generator, if p
 
 recipe samples:
 
-Dessert - {fruits2} CAKE (adapted from Carrot Cake: https://www.bbcgoodfood.com/recipes/carrot-cake)
+Cake - {fruits2} CAKE (adapted from Carrot Cake: https://www.bbcgoodfood.com/recipes/carrot-cake)
 
 230ml {vegetables1} oil
 100g natural yogurt
@@ -68,7 +68,7 @@ Remove the cakes from the tins and sandwich together with half the icing.
 Top with the remaining icing and scatter with the remaining {nuts2}. 
 Will keep in the fridge for up to five days. Best eaten at room temperature.
 
-Savory - Stir-fried {animal_meats}
+Stir-fry - Stir-fried {animal_meats}
 
 Ingredients:
 2 nests medium egg noodles
@@ -105,7 +105,7 @@ Divide the drained noodles between 2 bowls. Top with the {meat1} and {vegetables
 
 ######
 
-light - {vegetables1}, {fruits1} & {fruits2} salad
+salad - {vegetables1}, {fruits1} & {fruits2} salad
 
 2 large {fruits2}
 1½ tbsp wholegrain {grains1}
@@ -127,3 +127,7 @@ Using a vegetable peeler, peel {fruits1} ribbons into the dressing bowl and toss
 Heat a drizzle of oil in a frying pan and cook the {vegetables1} for a few mins until golden on both sides.\n
 Toss the watercress through the dressed {fruits1}.\n
 Arrange the {vegetables2} mixture on plates and top with the {vegetables1} and {fruits2}.\n
+
+######
+
+Future: steamed, fried, baked, sandwich, burger?
