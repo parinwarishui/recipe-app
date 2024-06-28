@@ -1,6 +1,5 @@
-import csv
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk
 import foodlist
 import random
 
@@ -13,7 +12,6 @@ background_color = '#ECEBC9'
 width = 1200
 height = 1000
 root.geometry(f"{width}x{height}")
-root.resizable(False, False)
 root.configure(background=background_color)
 
 main_animal_meats = foodlist.animal_meats
@@ -27,7 +25,8 @@ string_ingredients_header = "Ingredients:"
 # custom repeat function to remove old ones
 def random_norepeat(list):
     if not list:
-        print("No more elements to choose from.")
+        print("No more elements to choose from.") 
+        #in future, will write code to reset the list, so it can repeat the used items in next recipe generations.
         return None
     choice = random.choice(list)
     list.remove(choice)
@@ -36,14 +35,11 @@ def random_norepeat(list):
 # function to check submission
 def on_click():
     choice = choice1.get()
-    if choice == "dessert":
-        show_recipe(choice)
+    show_recipe(choice)
 
-
-
+# function to generate recipes based on choice
 def show_recipe(selected):
     if selected == "dessert":
-        global vegetables1, fruits1, fruits2, fruits3, seasoning1, seasoning2, seasoning3, seasoning4, grains1, nuts1, nuts2
         vegetables1 = random_norepeat(main_leaf_veggies)
         fruits1 = random_norepeat(main_fruits)
         fruits2 = random_norepeat(main_fruits)
@@ -99,34 +95,139 @@ def show_recipe(selected):
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
 
-        ingredients_name = tk.Label(scrollable_frame, text=string_desserts_name, font=('Comic Sans MS', 35, 'bold'), background=background_color)
+        ingredients_name = tk.Label(scrollable_frame, text=string_desserts_name, font=('Comic Sans MS', 35, 'bold'), background=background_color, fg='black')
         ingredients_name.pack(pady=10)
 
-        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color)
+        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
         ingredients_header_label.pack(pady=10)
 
-        ingredients_label = tk.Label(scrollable_frame, text=string_desserts_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color)
+        ingredients_label = tk.Label(scrollable_frame, text=string_desserts_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
         ingredients_label.pack(pady=10)
 
-        recipe_label = tk.Label(scrollable_frame, text=string_desserts, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT)
+        recipe_label = tk.Label(scrollable_frame, text=string_desserts, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
         recipe_label.pack(pady=10)
 
+    elif selected == "savory":
+        meat1 = random_norepeat(main_animal_meats)
+        grains1 = random_norepeat(main_grains)
+        grains2 = random_norepeat(main_grains)
+        seasoning1 = random_norepeat(main_seasoning)
+        seasoning2 = random_norepeat(main_seasoning)
+        seasoning3 = random_norepeat(main_seasoning)
+        seasoning4 = random_norepeat(main_seasoning)
+        vegetables1 = random_norepeat(main_leaf_veggies)
+        fruits1 = random_norepeat(main_fruits)
+        nuts1 = random_norepeat(main_nuts)
+
+        string_savory_ingredients = (
+            f"2 nests medium egg noodles\n"
+            f"2 tsp {grains1} flour\n"
+            f"2 tbsp {seasoning1}\n"
+            f"1 tbsp {seasoning2}\n"
+            f"1 tbsp {nuts1} oil\n"
+            f"250g/9oz {meat1}, cut into bite-sized pieces\n"
+            f"thumb-sized piece {seasoning3}\n"
+            f"2 {seasoning4}, finely chopped\n"
+            f"1 {fruits1}, deseeded and sliced\n"
+            f"100g {vegetables1}\n"
+            f"1 tsp {grains2}"
+        )
+
+        string_savory_name = f"stir-fried {meat1}(?)"
+
+        string_savory = (
+            f"STEP 1\n"
+            f"Bring a pan of salted water to the boil and cook the noodles following pack instructions.\n"
+            f"Meanwhile, mix the {grains1} flour with 1 tbsp water, then stir in the {seasoning1} and {seasoning2}, and set aside.\n"
+            f"STEP 2\n"
+            f"Heat the oil in a wok over a high heat. Add the {meat1} and cook for 2 mins until browned all over.\n"
+            f"Add the {seasoning3}, {seasoning4}, {fruits1} and {vegetables1}, and cook for a further 2 mins.\n" 
+            f"Reduce the heat, then add the {seasoning1} and {seasoning2} mixture, stirring and cooking until the sauce bubbles and thickens.\n" 
+            f"Divide the drained noodles between 2 bowls. Top with the {meat1} and {vegetables1}, and finish with a sprinkling of {grains2}.\n"
+        )
+
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+
+        ingredients_name = tk.Label(scrollable_frame, text=string_savory_name, font=('Comic Sans MS', 35, 'bold'), background=background_color, fg='black')
+        ingredients_name.pack(pady=10)
+
+        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+        ingredients_header_label.pack(pady=10)
+
+        ingredients_label = tk.Label(scrollable_frame, text=string_savory_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
+        ingredients_label.pack(pady=10)
+
+        recipe_label = tk.Label(scrollable_frame, text=string_savory, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+        recipe_label.pack(pady=10)
+
+    elif selected == "light":
+        vegetables1 = random_norepeat(main_leaf_veggies)
+        vegetables2 = random_norepeat(main_leaf_veggies)
+        fruits1 = random_norepeat(main_fruits)
+        fruits2 = random_norepeat(main_fruits)
+        seasoning1 = random_norepeat(main_seasoning)
+        seasoning2 = random_norepeat(main_seasoning)
+        grains1 = random_norepeat(main_grains)
+        grains2 = random_norepeat(main_grains)
+
+        string_light_ingredients = (
+            f"2 large {fruits2}\n"
+            f"1½ tbsp wholegrain {grains1}\n"
+            f"1½ tsp {seasoning1}\n"
+            f"1 tbsp {seasoning2}\n"
+            f"3 tbsp {grains2} oil, plus extra for frying\n"
+            f"2 large {fruits1}, peeled\n"
+            f"225g {vegetables1}, sliced\n"
+            f"100g bag {vegetables2}\n"
+        )
+
+        string_light_name = (f"{vegetables1}, {fruits1} & {fruits2} salad(?)")
+
+        string_light = (
+            f"STEP 1\n"
+            f"Cut the peel and pith away from the {fruits2}.\n"
+            f"Use a small serrated knife to segment the {fruits2}, catching any juices in a bowl,\n" 
+            f"then squeeze any excess juice from the off-cut pith into the bowl as well.\n" 
+            f"Add the {grains1}, {seasoning1}, {seasoning2}, {grains2} oil to the bowl and mix well.\n"
+
+            f"STEP 2\n"
+            f"Using a vegetable peeler, peel {fruits1} ribbons into the dressing bowl and toss gently.\n"
+            f"Heat a drizzle of oil in a frying pan and cook the {vegetables1} for a few mins until golden on both sides.\n"
+            f"Toss the watercress through the dressed {fruits1}.\n"
+            f"Arrange the {vegetables2} mixture on plates and top with the {vegetables1} and {fruits2}.\n"
+        )
+
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+
+        ingredients_name = tk.Label(scrollable_frame, text=string_light_name, font=('Comic Sans MS', 35, 'bold'), background=background_color, fg='black')
+        ingredients_name.pack(pady=10)
+
+        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+        ingredients_header_label.pack(pady=10)
+
+        ingredients_label = tk.Label(scrollable_frame, text=string_light_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
+        ingredients_label.pack(pady=10)
+
+        recipe_label = tk.Label(scrollable_frame, text=string_light, font=('Comic Sans MS', 15), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+        recipe_label.pack(pady=10)
 
 #############
 
 # header
-header = tk.Label(root, text='Amazing Recipe Generator', font=('Comic Sans MS', 30, 'bold'), background=background_color)
+header = tk.Label(root, text='Amazing Recipe Generator', font=('Comic Sans MS', 30, 'bold'), background=background_color, fg='black')
 header.pack()
 
 # warning quote
-subtitle = tk.Label(root, text='WARNING, this is only for entertainment purposes, DO NOT attempt any of the generated recipes at home, please.', font=('Comic Sans MS', 15),background=background_color)
+subtitle = tk.Label(root, text='WARNING, this is only for entertainment purposes, DO NOT attempt any of the generated recipes at home, please.', font=('Comic Sans MS', 15),background=background_color, fg='black')
 subtitle.pack()
 
 # Question and choice frame
 frame_top = tk.Frame(root, background=background_color)
 frame_top.pack(pady=10)
 
-question = tk.Label(frame_top, text='What type of dish would you like?', font=('Comic Sans MS', 15), background=background_color)
+question = tk.Label(frame_top, text='What type of dish would you like?', font=('Comic Sans MS', 15), background=background_color, fg='black')
 question.pack()
 
 choice1 = ttk.Combobox(frame_top, values=foodlist.dish_type, font=('Comic Sans MS', 12))
@@ -140,13 +241,13 @@ submit_button.pack()
 recipe_frame = tk.Frame(root, background=background_color)
 recipe_frame.pack(fill=tk.BOTH, expand=True, pady=10, padx=10)
 
-canvas = tk.Canvas(recipe_frame, background=background_color)
+canvas = tk.Canvas(recipe_frame, background=background_color, borderwidth=0, highlightthickness=0)
 scrollbar = ttk.Scrollbar(recipe_frame, orient='vertical', command=canvas.yview)
 scrollable_frame = tk.Frame(canvas, background=background_color)
 
 scrollable_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
 
-canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+canvas.create_window((0, 0), window=scrollable_frame, anchor="n")
 canvas.configure(yscrollcommand=scrollbar.set)
 
 canvas.pack(side="left", fill="both", expand=True)

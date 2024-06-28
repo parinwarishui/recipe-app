@@ -67,3 +67,63 @@ Add half the {seasoning4} and beat again, then add the rest (adding it bit by bi
 Remove the cakes from the tins and sandwich together with half the icing. 
 Top with the remaining icing and scatter with the remaining {nuts2}. 
 Will keep in the fridge for up to five days. Best eaten at room temperature.
+
+Savory - Stir-fried {animal_meats}
+
+Ingredients:
+2 nests medium egg noodles
+2 tsp {grains1} flour
+2 tbsp {seasoning1}
+1 tbsp {seasoning2}
+1 tbsp {nuts1} oil
+250g/9oz {meat1}, cut into bite-sized pieces
+thumb-sized piece {seasoning3}
+2 {seasoning4}, finely chopped
+1 {fruits1}, deseeded and sliced
+100g {vegetables1}
+1 tsp {grains2}
+
+meats1
+grains1
+grains2
+seasoning1
+seasoning2
+seasoning3
+seasoning4
+vegetables1
+fruits1
+nuts1
+
+STEP 1\n
+Bring a pan of salted water to the boil and cook the noodles following pack instructions.\n
+Meanwhile, mix the {grains1} flour with 1 tbsp water, then stir in the {seasoning1} and {seasoning2}, and set aside.\n
+STEP 2\n
+Heat the oil in a wok over a high heat. Add the {meat1} and cook for 2 mins until browned all over.\n 
+Add the {seasoning3}, {seasoning4}, {fruits1} and {vegetables1}, and cook for a further 2 mins.\n 
+Reduce the heat, then add the {seasoning1} and {seasoning2} mixture, stirring and cooking until the sauce bubbles and thickens.\n 
+Divide the drained noodles between 2 bowls. Top with the {meat1} and {vegetables1}, and finish with a sprinkling of {grains2}.\n
+
+######
+
+light - {vegetables1}, {fruits1} & {fruits2} salad
+
+2 large {fruits2}
+1½ tbsp wholegrain {grains1}
+1½ tsp {seasoning1}
+1 tbsp {seasoning2}
+3 tbsp {grains2} oil, plus extra for frying
+2 large {fruits1}, peeled
+225g {vegetables1}, sliced
+100g bag {vegetables2}
+
+STEP 1\n
+Cut the peel and pith away from the {fruits2}.\n 
+Use a small serrated knife to segment the {fruits2}, catching any juices in a bowl,\n 
+then squeeze any excess juice from the off-cut pith into the bowl as well.\n 
+Add the {grains1}, {seasoning1}, {seasoning2}, {grains2} oil to the bowl and mix well.\n
+
+STEP 2\n
+Using a vegetable peeler, peel {fruits1} ribbons into the dressing bowl and toss gently.\n
+Heat a drizzle of oil in a frying pan and cook the {vegetables1} for a few mins until golden on both sides.\n
+Toss the watercress through the dressed {fruits1}.\n
+Arrange the {vegetables2} mixture on plates and top with the {vegetables1} and {fruits2}.\n
