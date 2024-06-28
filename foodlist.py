@@ -1,6 +1,8 @@
 # this is a file to collect the data to be used
 
-dish_type = ["stir-fry", "cake", "salad", "sandwich"]
+dish_type = ["stir-fry", "cake", "salad", "sandwich", "soup", "noodles"]
+
+adjectives = ["delicious", "healthy", "colorful", "glamorous", "addictive", "tasty", "obnoxious", "fabulous", "beautiful", "popular", "quality", "amazing"]
 
 animal_meats = [
     "american bison",

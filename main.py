@@ -48,6 +48,9 @@ def on_click():
 
 # function to generate recipes based on choice
 def show_recipe(selected):
+    # declare general variables
+    global string_name, string_ingredients, string_steps, recipe_image
+
     if selected == "cake":
         vegetables1 = random_norepeat(leaf_veggies)
         fruits1 = random_norepeat(fruits)
@@ -62,7 +65,7 @@ def show_recipe(selected):
         nuts1 = random_norepeat(nuts)
         nuts2 = random_norepeat(nuts)
 
-        string_cake_ingredients = (
+        string_ingredients = (
             f"230g {vegetables1} oil\n"
             f"100g natural yogurt\n"
             f"½ {fruits1}, zested\n"
@@ -80,21 +83,21 @@ def show_recipe(selected):
             f"100g {seasoning4}"
         )
 
-        string_cake_name = (f"{fruits2} cake(?)")
+        string_name = (f"{fruits2} cake(?)")
 
-        string_cake = (f"STEP 1\n"
+        string_steps = (f"STEP 1\n"
         f"Heat the oven to 180C.\n" 
         f"Oil and line the base and sides of two 20cm cake tins with baking parchment.\n"
         f"Whisk the {vegetables1} oil, yogurt, eggs, {seasoning5} and {fruits1} zest in a jug.\n"
         f"Mix the flour, {seasoning1}, {seasoning2} and {nuts1} with a good pinch of salt in a bowl.\n"
-        f"Squeeze any lumps of {seasoning1} through your fingers, shaking the bowl a few times to bring the lumps to the surface.\n"
+        f"Squeeze any lumps of {seasoning1} through your fingers, shaking the bowl a few times to bring the lumps to the surface.\n\n"
         f"STEP 2\n"
         f"Add the wet ingredients to the dry, along with the {fruits2}, {fruits3} and half the {nuts2}.\n"
-        f"Mix well to combine, then divide between the tins.\n"
+        f"Mix well to combine, then divide between the tins.\n\n"
         f"STEP 3\n"
         f"Bake for 25-30 mins or until a skewer inserted into the centre of the cake comes out clean.\n"
         f"If any wet mixture clings to the skewer, return to the oven for 5 mins, then check again.\n"
-        f"Leave to cool in the tins.\n"
+        f"Leave to cool in the tins.\n\n"
         f"STEP 4\n"
         f"To make the icing, beat the butter and {seasoning3} together until smooth.\n"
         f"Add half the {seasoning4} and beat again, then add the rest (adding it bit by bit prevents the icing from splitting).\n"
@@ -104,23 +107,7 @@ def show_recipe(selected):
 
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
-
-        ingredients_name = tk.Label(scrollable_frame, text=string_cake_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_name.pack(pady=10)
-
         recipe_image = tk.PhotoImage(file="cake.png")
-        image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
-        image_label.pack(pady=10)
-        image_label.image = recipe_image
-
-        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_header_label.pack(pady=10)
-
-        ingredients_label = tk.Label(scrollable_frame, text=string_cake_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
-        ingredients_label.pack(pady=10)
-
-        recipe_label = tk.Label(scrollable_frame, text=string_cake, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
-        recipe_label.pack(pady=10)
 
     elif selected == "stir-fry":
         meat1 = random_norepeat(animal_meats)
@@ -134,7 +121,7 @@ def show_recipe(selected):
         fruits1 = random_norepeat(fruits)
         nuts1 = random_norepeat(nuts)
 
-        string_stirfry_ingredients = (
+        string_ingredients = (
             f"2 nests medium egg noodles\n"
             f"2 tsp {grains1} flour\n"
             f"2 tbsp {seasoning1}\n"
@@ -148,12 +135,12 @@ def show_recipe(selected):
             f"1 tsp {grains2}"
         )
 
-        string_stirfry_name = f"stir-fried {meat1}(?)"
+        string_name = f"stir-fried {meat1}(?)"
 
-        string_stirfry = (
+        string_steps = (
             f"STEP 1\n"
             f"Bring a pan of salted water to the boil and cook the noodles following pack instructions.\n"
-            f"Meanwhile, mix the {grains1} flour with 1 tbsp water, then stir in the {seasoning1} and {seasoning2}, and set aside.\n"
+            f"Meanwhile, mix the {grains1} flour with 1 tbsp water, then stir in the {seasoning1} and {seasoning2}, and set aside.\n\n"
             f"STEP 2\n"
             f"Heat the oil in a wok over a high heat. Add the {meat1} and cook for 2 mins until browned all over.\n"
             f"Add the {seasoning3}, {seasoning4}, {fruits1} and {vegetables1}, and cook for a further 2 mins.\n" 
@@ -163,23 +150,7 @@ def show_recipe(selected):
 
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
-
-        ingredients_name = tk.Label(scrollable_frame, text=string_stirfry_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_name.pack(pady=10)
-
         recipe_image = tk.PhotoImage(file="stirfry.png")
-        image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
-        image_label.pack(pady=10)
-        image_label.image = recipe_image
-
-        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_header_label.pack(pady=10)
-
-        ingredients_label = tk.Label(scrollable_frame, text=string_stirfry_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
-        ingredients_label.pack(pady=10)
-
-        recipe_label = tk.Label(scrollable_frame, text=string_stirfry, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
-        recipe_label.pack(pady=10)
 
     elif selected == "salad":
         vegetables1 = random_norepeat(leaf_veggies)
@@ -191,7 +162,7 @@ def show_recipe(selected):
         grains1 = random_norepeat(grains)
         grains2 = random_norepeat(grains)
 
-        string_salad_ingredients = (
+        string_ingredients = (
             f"2 large {fruits2}\n"
             f"1½ tbsp wholegrain {grains1}\n"
             f"1½ tsp {seasoning1}\n"
@@ -202,15 +173,14 @@ def show_recipe(selected):
             f"100g bag {vegetables2}\n"
         )
 
-        string_salad_name = (f"{vegetables1}, {fruits1} & {fruits2} salad(?)")
+        string_name = (f"{vegetables1}, {fruits1} & {fruits2} salad(?)")
 
-        string_salad = (
+        string_steps = (
             f"STEP 1\n"
             f"Cut the peel and pith away from the {fruits2}.\n"
             f"Use a small serrated knife to segment the {fruits2}, catching any juices in a bowl,\n" 
             f"then squeeze any excess juice from the off-cut pith into the bowl as well.\n" 
-            f"Add the {grains1}, {seasoning1}, {seasoning2}, {grains2} oil to the bowl and mix well.\n"
-
+            f"Add the {grains1}, {seasoning1}, {seasoning2}, {grains2} oil to the bowl and mix well.\n\n"
             f"STEP 2\n"
             f"Using a vegetable peeler, peel {fruits1} ribbons into the dressing bowl and toss gently.\n"
             f"Heat a drizzle of oil in a frying pan and cook the {vegetables1} for a few mins until golden on both sides.\n"
@@ -220,23 +190,7 @@ def show_recipe(selected):
 
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
-
-        ingredients_name = tk.Label(scrollable_frame, text=string_salad_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_name.pack(pady=10)
-
         recipe_image = tk.PhotoImage(file="salad.png")
-        image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
-        image_label.pack(pady=10)
-        image_label.image = recipe_image
-
-        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_header_label.pack(pady=10)
-
-        ingredients_label = tk.Label(scrollable_frame, text=string_salad_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
-        ingredients_label.pack(pady=10)
-
-        recipe_label = tk.Label(scrollable_frame, text=string_salad, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
-        recipe_label.pack(pady=10)
 
     elif selected == "sandwich":
         vegetables1 = random_norepeat(leaf_veggies)
@@ -250,7 +204,7 @@ def show_recipe(selected):
         nuts1 = random_norepeat(nuts)
         nuts2 = random_norepeat(nuts)
 
-        string_sandwich_ingredients = (
+        string_ingredients = (
             f"1 tbsp {nuts1} oil\n"
             f"1 {fruits1}, finely chopped\n"
             f"150ml {fruits2} wine\n"
@@ -264,48 +218,135 @@ def show_recipe(selected):
             f"handful {vegetables2}, to serve\n"
         )
 
-        string_sandwich_name = (f"{meat1} sandwich(?)")
+        string_name = (f"{meat1} sandwich(?)")
 
-        string_sandwich = f"""
+        string_steps = f"""
             STEP 1
             Heat oven to 180C.
             Pour the oil into a small saucepan over a medium heat,
             add the {fruits1} with a pinch of salt and cook, stirring frequently,
-            for 5 mins until softened and beginning to caramelise.
+            for 5 mins until softened and beginning to caramelise.\n
             STEP 2
             Tip in the wine, cook for a couple of mins until reduced by half,
             then pour in the stock. Leave to bubble for 15-20 mins
-            until you have a thick gravy.
+            until you have a thick gravy.\n
             STEP 3
             Put the baguette in the oven for 5 mins to warm up and crisp, then
             cut in half lengthways. Spread one half with {seasoning1} and top with
-            the roast {meat1}.
+            the roast {meat1}.\n
             STEP 4
             Add the {vegetables1}, {nuts2} and {seasoning2} to the gravy.
             Season to taste, then spoon the gravy over the other half of the baguette,
             scattering over some {vegetables2}. Halve, divide between two plates,
             then eat straight away, with more gravy on the side.
             """
+        
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+        recipe_image = tk.PhotoImage(file="sandwich.png")
+        
+    elif selected == "soup":
+        vegetables1 = random_norepeat(leaf_veggies)
+        vegetables2 = random_norepeat(leaf_veggies)
+        vegetables3 = random_norepeat(leaf_veggies)
+        vegetables4 = random_norepeat(leaf_veggies)
+        seasoning1 = random_norepeat(seasoning)
+        meat1 = random_norepeat(animal_meats)
+        grains1 = random_norepeat(grains)
+
+        string_ingredients = (f"""
+            90g butter
+            2 medium {vegetables2}, roughly chopped
+            {seasoning1}
+            500g {vegetables1}, finely chopped
+            2 tbsp {grains1} flour
+            1l hot {meat1} stock
+            1 {vegetables3}
+            4 tbsp single cream
+            small handful flat-leaf {vegetables4}
+        """)
+
+        string_name = (f"{vegetables1} soup(?)")
+
+        string_steps = f"""
+            STEP 1
+            Heat the butter in a large saucepan and cook the {vegetables2} and {seasoning1} until soft 
+            but not browned, about 8-10 mins.\n
+            STEP 2
+            Add the {vegetables1} and cook over a high heat for another 3 mins until softened. 
+            Sprinkle over the flour and stir to combine. Pour in the {meat1} stock, 
+            bring the mixture to the boil, then add the {vegetables3} and simmer for another 10 mins.\n
+            STEP 3
+            Remove and discard the {vegetables3}, then remove the {vegetables1} mixture from the heat 
+            and blitz using a hand blender until smooth. Gently reheat the soup and stir through the cream 
+            (or, you could freeze the soup at this stage – simply stir through the cream when heating). 
+            Scatter over the {vegetables4}, if you like, and serve.
+            """
 
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
+        recipe_image = tk.PhotoImage(file="soup.png")
+    
+    elif selected == "noodles":
+        vegetables1 = random_norepeat(leaf_veggies)
+        fruits1 = random_norepeat(fruits)
+        seasoning1 = random_norepeat(seasoning)
+        meat1 = random_norepeat(animal_meats)
+        grains1 = random_norepeat(grains)
+        nuts1 = random_norepeat(nuts)
+        nuts2 = random_norepeat(nuts)
 
-        ingredients_name = tk.Label(scrollable_frame, text=string_sandwich_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_name.pack(pady=10)
+        string_ingredients = (f"""
+            4 tbsp {seasoning1}
+            4 tbsp {fruits1} wine
+            1 {nuts1}, finely chopped
+            1 {nuts2}, crushed
+            2 {meat1} fillets
+            140g noodles
+            2 tbsp {grains1}
+            2 {vegetables1}, chopped
+        """)
 
-        recipe_image = tk.PhotoImage(file="sandwich.png")
-        image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
-        image_label.pack(pady=10)
-        image_label.image = recipe_image
+        string_name = (f"{meat1} noodles(?)")
 
-        ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
-        ingredients_header_label.pack(pady=10)
+        string_steps = f"""
+            STEP 1
+            Heat the oven to 180C/160C fan/gas 4. In a small jug, whisk together the {seasoning1}, 
+            {fruits1} wine, {nuts1}, and {nuts2}. Line a roasting tin with 
+            baking parchment and put the {meat1} in it. Pour over half the sauce, then bake 
+            for 15 mins until the {meat1} is cooked through.\n
+            STEP 2
+            Meanwhile, bring a large pan of water to the boil. Add the noodles and cook 
+            following pack instructions, then drain well.\n
+            STEP 3
+            In a small frying pan, lightly toast the {grains1} for 1 min, then add to the
+            cooked noodles (reserving a sprinkle for the top). Pour the remaining sauce over 
+            the noodles, plus any from the roasting tin, and toss together. Serve with the 
+            {meat1}, scattered with the chopped {vegetables1} and remaining {grains1}.
+            """
 
-        ingredients_label = tk.Label(scrollable_frame, text=string_sandwich_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
-        ingredients_label.pack(pady=10)
+        for widget in scrollable_frame.winfo_children():
+            widget.destroy()
+        recipe_image = tk.PhotoImage(file="noodles.png")
 
-        recipe_label = tk.Label(scrollable_frame, text=string_sandwich, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
-        recipe_label.pack(pady=10)
+    # create the text labels and images
+
+    header_label = tk.Label(scrollable_frame, text=string_name, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+    header_label.pack(pady=10)
+
+    image_label = tk.Label(scrollable_frame, image=recipe_image, background=background_color)
+    image_label.pack(pady=10)
+    image_label.image = recipe_image
+
+    ingredients_header_label = tk.Label(scrollable_frame, text=string_ingredients_header, font=('Comic Sans MS', 20, 'bold'), background=background_color, fg='black')
+    ingredients_header_label.pack(pady=10)
+
+    ingredients_label = tk.Label(scrollable_frame, text=string_ingredients, font=('Comic Sans MS', 15), wraplength=1000, justify=tk.LEFT, background=background_color, fg='black')
+    ingredients_label.pack(pady=10)
+
+    recipe_label = tk.Label(scrollable_frame, text=string_steps, font=('Comic Sans MS', 10), background=background_color, wraplength=1000, justify=tk.LEFT, fg='black')
+    recipe_label.pack(pady=10)
+
 
     reset_all_lists() #reset all ingredients lists
 

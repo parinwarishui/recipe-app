@@ -130,8 +130,6 @@ Arrange the {vegetables2} mixture on plates and top with the {vegetables1} and {
 
 ######
 
-Future: steamed, fried, baked, sandwich, burger?
-
 sandwich - roast {meat1} sandwich
 
 1 tbsp {nuts1} oil\n
@@ -164,3 +162,64 @@ Add the {vegetables1}, {nuts2} and {seasoning2} to the gravy.\n
 Season to taste, then spoon the gravy over the other half of the baguette,\n 
 scattering over some {vegetables2}. Halve, divide between two plates,\n 
 then eat straight away, with more gravy on the side.\n
+
+#####
+
+Soup - {vegetables1} soup
+Ingredients
+90g butter
+2 medium {vegetables2}, roughly chopped
+{seasoning1}
+500g {vegetables1}, finely chopped
+2 tbsp {grains1} flour
+1l hot {meat1} stock
+1 {vegetables3}
+4 tbsp single cream
+small handful flat-leaf {vegetables4}
+
+STEP 1
+Heat the butter in a large saucepan and cook the {vegetables2} and {seasoning1} until soft 
+but not browned, about 8-10 mins.
+
+STEP 2
+Add the {vegetables1} and cook over a high heat for another 3 mins until softened. 
+Sprinkle over the flour and stir to combine. Pour in the {meat1} stock, 
+bring the mixture to the boil, then add the {vegetables3} and simmer for another 10 mins.
+
+STEP 3
+Remove and discard the {vegetables3}, then remove the {vegetables1} mixture from the heat 
+and blitz using a hand blender until smooth. Gently reheat the soup and stir through the cream 
+(or, you could freeze the soup at this stage – simply stir through the cream when heating). 
+Scatter over the {vegetables4}, if you like, and serve.
+
+######
+
+noodles - {meat1} noodles
+
+4 tbsp {seasoning1}
+4 tbsp {fruits1} wine
+1 {nuts1}, finely chopped
+1 {nuts2}, crushed
+2 {meat1} fillets
+140g noodles
+2 tbsp {grains1}
+2 {vegetables1}, chopped
+
+STEP 1
+Heat the oven to 180C/160C fan/gas 4. In a small jug, whisk together the {seasoning1}, 
+{fruits1} wine, {nuts1}, and {nuts2}. Line a roasting tin with 
+baking parchment and put the {meat1} in it. Pour over half the sauce, then bake 
+for 15 mins until the {meat1} is cooked through.
+
+STEP 2
+Meanwhile, bring a large pan of water to the boil. Add the noodles and cook 
+following pack instructions, then drain well.
+
+STEP 3
+In a small frying pan, lightly toast the {grains1} for 1 min, then add to the
+cooked noodles (reserving a sprinkle for the top). Pour the remaining sauce over 
+the noodles, plus any from the roasting tin, and toss together. Serve with the 
+{meat1}, scattered with the chopped {vegetables1} and remaining {grains1}.
+
+######
+
